@@ -1,11 +1,9 @@
-﻿using Sales.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-
+﻿
 namespace Sales.ViewModels
 {
+using Sales.Common.Models;
+using System.Collections.ObjectModel;
+
     public class ProductsViewModel : BaseViewModel
     {
         private ObservableCollection<Product> products;
