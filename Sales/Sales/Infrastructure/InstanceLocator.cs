@@ -7,10 +7,10 @@ namespace Sales.Infrastructure
     
     public class InstanceLocator
     {
-        public MainViewModel Main { get; set; }
+        public ProductsViewModel Products { get; set; }
         public InstanceLocator()
         {
-            this.Main = new MainViewModel();
+            this.Products = new ProductsViewModel();
         }
     }
 }
