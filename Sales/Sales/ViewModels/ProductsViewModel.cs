@@ -24,7 +24,7 @@ using Sales.Services;
         }
         public async void LoadProducts()
         {
-            var response = await this.apiService.GetList<Product>("192.168.1.20", "api", "Product");
+            var response = await this.apiService.GetList<Product>("http:192.168.1.20/", "api/", "Product/");
             if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", response.Message, "Accept");
