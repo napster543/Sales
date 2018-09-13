@@ -41,7 +41,9 @@ using Sales.Services;
         {
             this.IsRefreshing = true;
             var url = Application.Current.Resources["UrlAPI"].ToString();
-            var response = await this.apiService.GetList<Product>("http:192.168.1.20/", "api/", "Product/");
+            var prefix = Application.Current.Resources["UrlPrefix"].ToString();
+            var controller = Application.Current.Resources["UrlProductsController"].ToString();
+            var response = await this.apiService.GetList<Product>(url, prefix, controller);
             if (!response.IsSuccess)
             {
                 this.IsRefreshing = false;
@@ -53,6 +55,9 @@ using Sales.Services;
             this.IsRefreshing = false;
         }
         //https://www.youtube.com/watch?v=ZwDWwxc0KG0&list=PLuEZQoW9bRnRnzwx4z1kzoY2Pt2nve6L_&index=8
-        //Video 8 minuto 00:00
+        //Video 9 minuto 00:00
+
+        //conociendo Redux con angular
+        //https://www.youtube.com/watch?v=LudInW0T55Q
     }
 }
